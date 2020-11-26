@@ -327,7 +327,7 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
           contentPadding: EdgeInsets.all(0),
           shape: widget.popupShape,
           backgroundColor: widget.popupBackgroundColor,
-          content: _selectDialogInstance(data),
+          content: _selectDialogInstance(widget.selectedItem),
         );
       },
     );
@@ -348,7 +348,7 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
               padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
-              child: _selectDialogInstance(data, defaultHeight: 350),
+              child: _selectDialogInstance(widget.selectedItem, defaultHeight: 350),
             ),
           );
         });
