@@ -429,8 +429,10 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
 
   ///handle on change value , if the validation is active , we validate the new selected item
   void _handleOnChangeSelectedItem(T selectedItem) {
+        _selectedItemNotifier.value = selectedItem;
+      if(widget.selectedItem == null)
+        _selectedItemNotifier.value = widget.selectedItem;
     if (widget.onChanged != null) widget.onChanged(selectedItem);
-    _selectedItemNotifier.value = widget.selectedItem;
     _handleFocus(false);
   }
 
