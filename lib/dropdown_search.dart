@@ -384,7 +384,7 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
             enabled: false,
             child: Container(
               width: popupButtonObject.size.width,
-              child: _selectDialogInstance(data, defaultHeight: 224),
+              child: _selectDialogInstance(widget.selectedItem, defaultHeight: 224),
             ),
           ),
         ]);
